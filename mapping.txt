@@ -1,0 +1,29 @@
+1. Table Creation for Entities:
+   - We created a corresponding table for each entity, naming the table after the entity itself.
+
+2. Attribute Mapping to Table Columns:
+   - We assigned each entity attribute to a specific table column, specifying data types and constraints based on the provided attributes.
+
+3. Handling Subclasses (IsA Relationships):
+   - When a subclass entity included additional attributes compared to its parent entity, we established a separate table for it. We linked subclass tables to their parent entity using primary key relationships.
+
+4. Defined Relationships:
+   - We identified relationships between entities and created junction tables to represent one-to-many (1:n) and many-to-many (m:n) relationships.
+   - We enforced referential integrity by defining foreign key constraints.
+
+5. Considered Cardinality and Optionality:
+   - We took into account the cardinality (e.g., 1, 0:n, 1:1) and optionality (mandatory or optional) of relationships when creating junction tables and defining constraints.
+   - We used foreign key constraints and NULLability to express these cardinalities and optionality.
+
+6. Added Additional Constraints and Data Types:
+   - We specified constraints, such as primary keys, unique constraints, and check constraints, as needed.
+   - We chose appropriate data types (e.g., VARCHAR2, NUMBER, DATE) for each attribute.
+
+7. Wrote DDL Statements:
+   - We created SQL DDL statements for table creation, defining columns, constraints, and relationships.
+   - We ensured that primary and foreign keys were correctly defined.
+
+8. Executed DDL Statements:
+   - We executed the DDL statements on our database management system to generate the tables and establish relationships.
+
+By following this approach, we systematically converted the provided ER diagram into a set of DDL statements for creating the corresponding database schema in the past.
