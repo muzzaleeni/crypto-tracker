@@ -1,0 +1,139 @@
+/* Global Styles */
+body {
+  background-color: hsl(0, 0%, 20%);
+  color: #c0c0c0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bolder;
+}
+
+a {
+  color: #c0c0c0;
+  text-decoration: none;
+}
+
+/* Navigation Bar */
+.topnav {
+  padding: 14px 25px 23px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333333;
+  font-size: 1.5rem;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.left-section {
+  float: left;
+}
+
+.right-section {
+  float: right;
+}
+
+/* Buttons */
+.button {
+  border: none;
+  color: #c0c0c0;
+  background-color: #666666;
+  text-transform: uppercase;
+  padding: 7px 23px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1rem;
+  transition: all 0.3s ease-out; /* Add a transition for smooth animation */
+}
+
+.button:hover {
+  background-color: #555555;
+  color: #fff;
+}
+
+/* Overlay and Popup */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.wrapper {
+  margin: 70px auto;
+  padding: 20px;
+  background: hsl(0, 0%, 20%);
+  border-radius: 10px;
+  width: 30%;
+  position: relative;
+}
+
+.wrapper .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 100ms;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.wrapper .content {
+  max-height: 30%;
+  overflow: auto;
+  text-align: center;
+}
+
+/* Form and Inputs */
+.container {
+  border-radius: 5px;
+  padding: 20px 0;
+}
+
+input[type="text"],
+textarea {
+  width: 80%;
+  padding: 9px;
+  border: 3px solid #c0c0c0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  font-weight: bolder;
+}
+
+/* Pop-up Nav */
+.pop-up-nav {
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+}
+
+.pop-up-nav:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Adjust the thickness of the underline */
+  bottom: 0;
+  left: 0;
+  background: orange; /* Set the desired underline color */
+  transform: scaleX(0); /* Initially no width */
+  transform-origin: 0 100%;
+  transition: transform 0.3s ease-out;
+}
+
+.pop-up-nav:hover {
+  color: orange; /* Change text color to orange on hover */
+}
+
+.pop-up-nav:hover:after {
+  transform: scaleX(1); /* Expand the underline on hover */
+}
