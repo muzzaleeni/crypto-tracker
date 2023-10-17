@@ -48,69 +48,89 @@ signUpLink.addEventListener("click", () => {
 
 /* --- Code for the Carousel --- */
 
-const slider = document.querySelector(".items");
-const slides = document.querySelectorAll(".item");
+if (window.location.pathname.endsWith("index.html")) {
+  const slider = document.querySelector(".items");
+  const slides = slider.querySelectorAll(".item");
 
-let current = 0;
+  let current = 0;
 
-// Define the interval for automatic sliding
-const interval = 3000; // 5000 milliseconds (5 seconds)
+  // Define the interval for automatic sliding
+  const interval = 3000; // 5000 milliseconds (5 seconds)
 
-updateSlideClasses();
-
-// Function to go to the next slide
-function gotoNext() {
-  current = (current + 1) % slides.length;
   updateSlideClasses();
-}
 
-// Function to update slide classes
-function updateSlideClasses() {
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("active", "prev", "next");
+  // Function to go to the next slide
+  function gotoNext() {
+    current = (current + 1) % slides.length;
+    updateSlideClasses();
   }
-  const prev = (current - 1 + slides.length) % slides.length;
-  const next = (current + 1) % slides.length;
-  slides[current].classList.add("active");
-  slides[prev].classList.add("prev");
-  slides[next].classList.add("next");
-  slides[current].addEventListener("click", () => {
-    // Replace "desired-page.html" with the desired URL
-    window.location.href = "table.html";
-  });
+
+  // Function to update slide classes
+  function updateSlideClasses() {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("active", "prev", "next");
+    }
+    const prev = (current - 1 + slides.length) % slides.length;
+    const next = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+    slides[prev].classList.add("prev");
+    slides[next].classList.add("next");
+    slides[current].addEventListener("click", () => {
+      // Replace "desired-page.html" with the desired URL
+      window.location.href = "table.html";
+    });
+  }
+
+  // Start the automatic sliding
+  const autoSlideInterval = setInterval(gotoNext, interval);
 }
 
-// Start the automatic sliding
-const autoSlideInterval = setInterval(gotoNext, interval);
+if (window.location.pathname.endsWith("table.html")) {
+  /* --- Search Bar Code --- */
 
-/* --- Search Bar Code --- */
+  // Function for search bar
+  function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
 
-// Function for search bar
-function myFunction() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
+    // Check if elements exist
+    if (table && table.getElementsByTagName("tr")) {
+      tr = table.getElementsByTagName("tr");
 
-  // Check if elements exist
-  if (table && table.getElementsByTagName("tr")) {
-    tr = table.getElementsByTagName("tr");
+      // Loop through all table rows, and hide those that don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
 
-    // Loop through all table rows, and hide those that don't match the search query
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
+        // Check if td exists
+        if (td) {
+          txtValue = td.textContent || td.innerText;
 
-      // Check if td exists
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
         }
       }
     }
   }
+
+  /* Making table rows clickable */
+
+  // Get all elements with the class "not-header"
+  const rows = document.querySelectorAll(".not-header");
+
+  // Add a click event listener to each row
+  rows.forEach((row) => {
+    row.addEventListener("click", function () {
+      // Get the destination URL from the data-href attribute
+      const destination = row.getAttribute("data-href");
+
+      // Navigate to the destination URL
+      window.location.href = destination;
+    });
+  });
 }

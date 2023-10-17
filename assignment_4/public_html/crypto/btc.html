@@ -7,6 +7,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -66,12 +67,14 @@
           </div>
         </div>
         <div class="left-align-elem">
-            <p><b>Rating:</b> 1</p>
-            <p><b>Current price:</b> $ 28,253</p>
-            <p><b>Sales volume:</b> $ 551,092M</p>
+          <p><b>Rating:</b> 1</p>
+          <p><b>Current price:</b> $ 28,253</p>
+          <p><b>Sales volume:</b> $ 551,092M</p>
         </div>
       </div>
-      <div id="graph"></div>
+      <div id="graph">
+        <canvas id="cryptoChart"></canvas>
+      </div>
     </div>
 
     <script src="../js/script.js"></script>
