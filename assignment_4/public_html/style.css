@@ -319,7 +319,7 @@ pop-up-nav:hover:after {
   border-bottom: 0.2px solid #ddd;
 }
 
-#myTable tr:hover {
+#myTable tr.not-header:hover {
   /* Add a grey background color to the table header and on hover */
   background-color: #222222;
   cursor: pointer;
