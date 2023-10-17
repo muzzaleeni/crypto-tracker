@@ -70,12 +70,15 @@ h2 {
 
 .right-section {
   float: right;
+  display: flex;
 }
 
 /* Button Styles */
 .button {
   border: none;
   color: #c0c0c0;
+  margin-right: 10px;
+  margin-left: 10px;
   background-color: #666666;
   text-transform: uppercase;
   padding: 7px 23px;
@@ -357,8 +360,8 @@ input[type="submit"] {
 
 #info {
   flex: 1;
-  padding-left: 1px;
-  padding-right: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
   padding-top: 50px;
   padding-bottom: 50px;
   border-right: 1px solid #c0c0c0;
@@ -366,6 +369,10 @@ input[type="submit"] {
 
 #graph {
   flex: 2.5;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .center-align-elem {

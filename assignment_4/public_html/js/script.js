@@ -118,7 +118,7 @@ if (window.location.pathname.endsWith("table.html")) {
     }
   }
 
-  /* Making table rows clickable */
+  /* --- Making table rows clickable --- */
 
   // Get all elements with the class "not-header"
   const rows = document.querySelectorAll(".not-header");
@@ -134,3 +134,45 @@ if (window.location.pathname.endsWith("table.html")) {
     });
   });
 }
+
+const xValues = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+const yValues = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+/* --- Code for the graph --- */
+
+new Chart("cryptoChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [
+      {
+        fill: false,
+        lineTension: 0,
+        backgroundColor: "#00ccff",
+        borderColor: "#00ccff",
+        data: yValues,
+        pointRadius: 0,
+        pointHoverRadius: 0,
+      },
+    ],
+  },
+  options: {
+    legend: { display: false },
+    scales: {
+      x: {
+        grid: {
+          color: "rgba(0, 0, 0, 0)", // Remove grid lines for the X axis
+        },
+      },
+      y: {
+        grid: {
+          color: "rgba(0, 0, 0, 0)", // Remove grid lines for the Y axis
+        },
+        ticks: {
+          min: 6,
+          max: 16,
+        },
+      },
+    },
+  },
+});
