@@ -32,7 +32,7 @@ a {
   z-index: 5;
 }
 
-.logo h2 {
+h2 {
   font-size: 3.5rem;
   background: linear-gradient(
     45deg,
@@ -175,11 +175,11 @@ input[type="submit"] {
   transition: transform 0.3s ease-out;
 }
 
-pop-up-nav:hover {
-  color: #00ccff; /* Change text color to orange on hover */
+.pop-up-nav:hover {
+  color: #00ccff;
 }
 
-pop-up-nav:hover:after {
+.pop-up-nav:hover:after {
   transform: scaleX(1); /* Expand the underline on hover */
 }
 
@@ -349,6 +349,78 @@ pop-up-nav:hover:after {
   margin: 0 auto; /* Center the element horizontally */
 }
 
+/* Crypto Info */
+.coin-info {
+  display: flex;
+  flex-direction: row;
+}
+
+#info {
+  flex: 1;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-right: 1px solid #c0c0c0;
+}
+
+#graph {
+  flex: 2.5;
+}
+
+.center-align-elem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-align-elem h2 {
+  font-size: 35px;
+}
+
+.left-align-elem {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.left-align-elem p {
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  word-spacing: 1.5px;
+}
+
+.left-align-elem b {
+  font-size: 25px;
+}
+
+.image-description {
+  width: 200px;
+  height: 200px;
+}
+
+.explanation {
+  font-weight: 300;
+  margin: 0 auto;
+  letter-spacing: 1.5px;
+  word-spacing: 1.5px;
+  padding: 10px;
+}
+
+/* Disclaimer text styling */
+
+.disclaimer {
+  font-weight: 300;
+  padding: 100px;
+  width: 50%;
+  margin: 0 auto;
+}
+.disclaimer p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
 /* Media Queries */
 
 @media screen and (max-height: 800px) {
@@ -427,7 +499,7 @@ pop-up-nav:hover:after {
   }
 }
 
-@media screen and (max-width: 570px) and (max-height: 915px){
+@media screen and (max-width: 570px) and (max-height: 915px) {
   .logo h2 {
     font-size: 1.5rem; /* Reduce the font size for small screens */
   }
@@ -446,7 +518,7 @@ pop-up-nav:hover:after {
   }
 }
 
-@media screen and (max-width: 1024px) and (max-height: 650px){
+@media screen and (max-width: 1024px) and (max-height: 650px) {
   .logo h2 {
     font-size: 1.5rem;
   }
