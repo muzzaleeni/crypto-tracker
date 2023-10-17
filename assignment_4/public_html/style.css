@@ -15,16 +15,9 @@ a {
   text-decoration: none;
 }
 
-/* Body Content Container */
-.body-content {
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column; /* To stack divs vertically */
-  align-items: center;
-}
-
 /* Body Container */
 .body-container {
+  padding-top: 50px;
   display: flex;
   flex-direction: column; /* To stack divs vertically */
   align-items: center;
@@ -32,6 +25,8 @@ a {
 
 /* Logo Styles */
 .logo {
+  display: block;
+  position: top;
   text-align: center;
   margin-bottom: 30px;
   z-index: 5;
@@ -194,18 +189,14 @@ pop-up-nav:hover:after {
 
 /* Carousel and Item Styles */
 .items {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 1;
-  user-select: none;
 }
 
 .items .item {
   position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
   width: 250px;
   height: 250px;
@@ -297,6 +288,8 @@ pop-up-nav:hover:after {
   font-size: 18px; /* Increase font-size */
   border-radius: 5px; /* Add border-radius to the entire table */
   overflow: hidden; /* Optional: Prevent content overflow */
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #myTable th {
@@ -358,16 +351,59 @@ pop-up-nav:hover:after {
 
 /* Media Queries */
 
-/* Styles for screens with a maximum width of 600px */
-@media (max-width: 600px) {
-  .body-container {
-    width: 90%; /* Adjust the width for small screens */
+@media screen and (max-height: 800px) {
+  .logo h2 {
+    font-size: 2.8rem; /* Reduce the font size for small screens */
   }
 
-  .logo h2 {
-    font-size: 2.5rem; /* Reduce the font size for small screens */
+  .logo h3 {
+    font-size: 22px;
+  }
+
+  .items .item {
+    width: 150px;
+    height: 150px;
+  }
+
+  .topnav {
+    font-size: 1rem;
   }
 }
 
-/* Styles for screens with a minimum width of 601px and up to 900px */
-@media only screen and (max-width: 500px) { div {width: 100%;}}
+@media screen and (max-height: 700px) {
+  .logo h2 {
+    font-size: 2.5rem; /* Reduce the font size for small screens */
+  }
+
+  .logo h3 {
+    font-size: 20px;
+  }
+
+  .items .item {
+    width: 100px;
+    height: 100px;
+  }
+
+  .topnav {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-height: 640px) {
+  .logo h2 {
+    font-size: 1.5rem; /* Reduce the font size for small screens */
+  }
+
+  .logo h3 {
+    font-size: 15px;
+  }
+
+  .items .item {
+    width: 60px;
+    height: 60px;
+  }
+
+  .topnav {
+    font-size: 0.8rem;
+  }
+}

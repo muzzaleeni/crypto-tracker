@@ -1,3 +1,5 @@
+/* --- Pop-up Form Code --- */
+
 // Reference elements
 const overlay = document.getElementById("form");
 const signInMainLink = document.getElementById("signin-main-btn");
@@ -5,9 +7,6 @@ const signInLink = document.getElementById("signin-btn");
 const signUpLink = document.getElementById("signup-btn");
 const signInForm = document.getElementById("signin");
 const signUpForm = document.getElementById("signup");
-
-// Define the interval for automatic sliding
-const interval = 3000; // 5000 milliseconds (5 seconds)
 
 // Function to toggle forms
 function toggleForms(formToShow, formToHide) {
@@ -47,13 +46,17 @@ signUpLink.addEventListener("click", () => {
   setLinkColor(signUpLink, signInLink);
 });
 
-// Carousel to show 8 cryptocurrencies
+/* --- Code for the Carousel --- */
+
 const slider = document.querySelector(".items");
 const slides = document.querySelectorAll(".item");
 
 let current = 0;
 
-updateSlideClasses(); 
+// Define the interval for automatic sliding
+const interval = 3000; // 5000 milliseconds (5 seconds)
+
+updateSlideClasses();
 
 // Function to go to the next slide
 function gotoNext() {
@@ -79,6 +82,8 @@ function updateSlideClasses() {
 
 // Start the automatic sliding
 const autoSlideInterval = setInterval(gotoNext, interval);
+
+/* --- Search Bar Code --- */
 
 // Function for search bar
 function myFunction() {
