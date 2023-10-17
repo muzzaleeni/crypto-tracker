@@ -407,3 +407,60 @@ pop-up-nav:hover:after {
     font-size: 0.8rem;
   }
 }
+
+@media screen and (max-height: 640px) {
+  .logo h2 {
+    font-size: 1.5rem; /* Reduce the font size for small screens */
+  }
+
+  .logo h3 {
+    font-size: 15px;
+  }
+
+  .items .item {
+    width: 60px;
+    height: 60px;
+  }
+
+  .topnav {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 570px) and (max-height: 915px){
+  .logo h2 {
+    font-size: 1.5rem; /* Reduce the font size for small screens */
+  }
+
+  .logo h3 {
+    font-size: 15px;
+  }
+
+  .items .item {
+    width: 100px;
+    height: 100px;
+  }
+
+  .topnav {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 650px){
+  .logo h2 {
+    font-size: 1.5rem;
+  }
+
+  .logo h3 {
+    font-size: 15px;
+  }
+
+  .items .item {
+    width: 100px;
+    height: 100px;
+  }
+
+  .topnav {
+    font-size: 0.8rem;
+  }
+}
