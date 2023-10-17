@@ -7,7 +7,7 @@ const signInForm = document.getElementById("signin");
 const signUpForm = document.getElementById("signup");
 
 // Define the interval for automatic sliding
-const interval = 2000; // 5000 milliseconds (5 seconds)
+const interval = 3000; // 5000 milliseconds (5 seconds)
 
 // Function to toggle forms
 function toggleForms(formToShow, formToHide) {
@@ -53,6 +53,8 @@ const slides = document.querySelectorAll(".item");
 
 let current = 0;
 
+updateSlideClasses(); 
+
 // Function to go to the next slide
 function gotoNext() {
   current = (current + 1) % slides.length;
@@ -77,3 +79,33 @@ function updateSlideClasses() {
 
 // Start the automatic sliding
 const autoSlideInterval = setInterval(gotoNext, interval);
+
+// Function for search bar
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+
+  // Check if elements exist
+  if (table && table.getElementsByTagName("tr")) {
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those that don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+
+      // Check if td exists
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+}

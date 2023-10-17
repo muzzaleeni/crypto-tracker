@@ -53,7 +53,7 @@ a {
   font-size: 25px;
   margin: 20px 0;
   font-weight: lighter;
-  animation: pulse-text 2s infinite;
+  animation: pulse-text 3s infinite;
 }
 
 /* Navigation Bar Styles */
@@ -225,7 +225,7 @@ pop-up-nav:hover:after {
   opacity: 0.7;
   z-index: 15;
   cursor: pointer;
-  animation: pulse-border 2s infinite;
+  animation: pulse-border 3s infinite;
 }
 
 .item.active:hover {
@@ -268,4 +268,89 @@ pop-up-nav:hover:after {
   z-index: 6;
   opacity: 0.25;
   transform: translate(25%, -50%);
+}
+
+/* Table Styles */
+.market-table {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#myInput {
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #c0c0c0; /* Add a grey border */
+  margin-bottom: 30px; /* Add some space below the input */
+  margin-top: 50px; /* Add some space below the input */
+}
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  font-size: 18px; /* Increase font-size */
+  border-radius: 5px; /* Add border-radius to the entire table */
+  overflow: hidden; /* Optional: Prevent content overflow */
+}
+
+#myTable th {
+  text-align: left; /* Left-align text */
+  padding: 20px; /* Add padding */
+  background: #00ccff;
+}
+
+.header {
+  color: black;
+}
+
+#myTable td {
+  text-align: left; /* Left-align text */
+  padding: 20px; /* Add padding */
+  color: white;
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 0.2px solid #ddd;
+}
+
+#myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #222222;
+  cursor: pointer;
+}
+
+.crypto-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.crypto-logo-container {
+  float: left; /* Float the logo container to the left */
+  margin-right: 10px; /* Add space between the logo and the details */
+}
+
+.crypto-details {
+  overflow: hidden; /* Contain the details div to prevent float overlap */
+}
+
+.crypto-abrv {
+  margin-top: 10px;
+  font-weight: lighter;
+  color: #c0c0c0;
+}
+
+/* Footer */
+.footer {
+  font-style: italic; /* Make the text italic */
+  text-align: left; /* Align text to the left */
+  padding: 20px; /* Add padding for space around the content */
+  padding-bottom: 40px;
+  width: 50%; /* Set the width to 50% */
+  margin: 0 auto; /* Center the element horizontally */
 }
