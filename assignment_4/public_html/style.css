@@ -75,6 +75,10 @@ h2 {
 
 /* Button Styles */
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   border: none;
   color: #c0c0c0;
   margin-right: 10px;
@@ -84,9 +88,9 @@ h2 {
   padding: 7px 23px;
   cursor: pointer;
   border-radius: 10px;
-  text-align: center;
+
   font-size: 1rem;
-  transition: all 0.3s ease-out; /* Add a transition for smooth animation */
+  transition: all 0.3s ease-out;
 }
 
 .button:hover {
