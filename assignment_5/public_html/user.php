@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param('sssi', $user['email'], $user['username'], $user['password'], $user['premium']);
     if ($stmt->execute()) {
         echo json_encode(["message" => "User added successfully"]);
+        echo '<a href="pages/maintenance.html">Back to Maintenance Page</a>';
     } else {
         echo "Error: " . $mysqli->error;
     }

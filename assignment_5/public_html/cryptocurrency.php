@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param('isdd', $cryptocurrency['rating'], $cryptocurrency['name'], $cryptocurrency['price'], $cryptocurrency['sales_volume']);
     if ($stmt->execute()) {
         echo json_encode(["message" => "Cryptocurrency added successfully"]);
+        echo '<a href="pages/maintenance.html">Back to Maintenance Page</a>';
     } else {
         echo "Error: " . $mysqli->error;
     }

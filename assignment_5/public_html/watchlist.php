@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($stmt->execute()) {
         echo json_encode(["message" => "Watchlist added successfully"]);
     } else {
-        echo "Error: " . $mysqli->error;
+        echo "You have to be registered to be able to have watchlist. Sign in function is still under development!";
     }
 }
 
