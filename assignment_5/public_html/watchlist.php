@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode(["message" => "Watchlist added successfully"]);
     } else {
         echo "You have to be registered to be able to have watchlist. Sign in function is still under development!";
+        echo '<a href="pages/maintenance.html">Back to Maintenance Page</a>';
     }
 }
 
