@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Alpine Crypto Tracker</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="topnav">
+      <a class="left-section" href="../index.html">Alpine Crypto Tracker</a>
+      <div class="right-section">
+        <a href="../pages/maintenance.html" class="button"> Maintenance </a>
+        <a href="../pages/disclaimer.html" class="button"> Disclaimer </a>
+        <div class="button" id="signin-main-btn">Sign in</div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="overlay" id="form">
+      <div class="wrapper">
+        <div class="topnav" id="in-nav">
+          <div class="pop-up-nav active" id="signin-btn">Sign in</div>
+          <div class="pop-up-nav" id="signup-btn">Sign up</div>
+        </div>
+        <div class="content" id="signin">
+          <div class="container">
+            <form>
+              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="Password" />
+              <input type="submit" value="Submit" class="center-button" />
+            </form>
+          </div>
+        </div>
+        <div class="content" id="signup">
+          <div class="container">
+            <form>
+              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="Password" />
+              <input type="text" placeholder="Confirm Password" />
+              <input type="submit" value="Submit" class="center-button" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Crypto Details -->
+    <div class="coin-info">
+      <div id="info">
+        <div class="center-align-elem">
+          <img
+            src="../img/bnb-bnb-logo-transparent.png"
+            class="image-description"
+          />
+          <h2>BNB</h2>
+          <div class="explanation">
+            <p>Binance Coin is the cryptocurrency of the Binance platform.</p>
+          </div>
+        </div>
+        <div class="left-align-elem">
+          <p><b>Rating:</b> 4</p>
+          <p><b>Current price:</b> $ 211,45</p>
+          <p><b>Sales volume:</b> $ 32,548M</p>
+        </div>
+      </div>
+      <div id="graph">
+        <canvas id="cryptoChart"></canvas>
+      </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
