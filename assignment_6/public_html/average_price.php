@@ -9,15 +9,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!is_numeric($x) || $x <= 0) {
         echo "Please provide a valid positive number for X.";
     } else {
-        $sql = "SELECT u.Username, MAX(c.Price) AS Highest_Price
-                FROM User u
-                JOIN Premium_User pu ON u.UserID = pu.UserID
-                JOIN Premium_User_Watchlist pw ON pu.UserID = pw.UserID
-                JOIN Watchlist_Crypto wc ON pw.WatchlistID = wc.WatchlistID
+        $sql = "SELECT w.WatchlistID, AVG(c.Price) AS AveragePrice
+                FROM Watchlist w
+                JOIN Watchlist_Crypto wc ON w.WatchlistID = wc.WatchlistID
                 JOIN Cryptocurrency c ON wc.CryptoID = c.CryptoID
-                GROUP BY u.Username
-                ORDER BY Highest_Price DESC
-                LIMIT ?";
+                GROUP BY w.WatchlistID
+                LIMIT ?"; // Add the LIMIT clause here
         
         $stmt = $mysqli->prepare($sql);
         if (!$stmt)
@@ -29,9 +26,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             // Fetch and display the results
             echo "<table>";
-            echo "<tr><th>Username</th><th>Highest Price</th></tr>";
+            echo "<tr><th>Watchlist ID</th><th>Average Price</th></tr>";
             while ($row = $result->fetch_assoc()) {
-                echo "<tr><td><a href='queries/highest_price.html?username=" . urlencode($row['Username']) . "'>" . $row['Username'] . "</a></td><td>" . $row['Highest_Price'] . "</td></tr>";
+                $watchlistID = $row['WatchlistID'];
+                $averagePrice = $row['AveragePrice'];
+                
+                // Create a hyperlink to the watchlist item
+                echo "<tr><td><a href='queries/average_price.html?watchlistID=$watchlistID'>$watchlistID</a></td><td>$averagePrice</td></tr>";
             }
             echo "</table>";
             

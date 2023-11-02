@@ -49,7 +49,7 @@
             
             if (username) {
                 // Make an AJAX request to retrieve user details based on the username
-                fetch('../retrieve_details.php?username=' + username)
+                fetch('../retrieve_hp.php?username=' + username)
                     .then(response => response.json())
                     .then(data => {
                         console.log(data);
