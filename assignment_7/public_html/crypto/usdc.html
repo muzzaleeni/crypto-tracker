@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Alpine Crypto Tracker</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="topnav">
+      <a class="left-section" href="../index.html">Alpine Crypto Tracker</a>
+      <div class="right-section">
+        <a href="../pages/maintenance.html" class="button"> Queries </a>
+        <a href="../pages/maintenance.php" class="button"> Maintenance </a>
+        <a href="../pages/disclaimer.html" class="button"> Disclaimer </a>
+      </div>
+    </div>
+
+    <!-- Crypto Details -->
+    <div class="coin-info">
+      <div id="info">
+        <div class="center-align-elem">
+          <img
+            src="../img/usd-coin-usdc-logo-transparent.png"
+            class="image-description"
+          />
+          <h2>USDC</h2>
+          <div class="explanation">
+            <p>USDC is a fully collateralized US dollar stablecoin.</p>
+          </div>
+        </div>
+        <div class="left-align-elem">
+          <p><b>Rating:</b> 6</p>
+          <p><b>Current price:</b> $ 1</p>
+          <p><b>Sales volume:</b> $ 25,250M</p>
+        </div>
+      </div>
+      <div id="graph">
+        <canvas id="cryptoChart"></canvas>
+      </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

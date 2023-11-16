@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="topnav">
+      <a class="left-section" href="../index.html">Alpine Crypto Tracker</a>
+      <div class="right-section">
+        <a href="../pages/queries.html" class="button"> Queries </a>
+        <a href="../pages/maintenance.php" class="button"> Maintenance </a>
+        <a href="../pages/disclaimer.html" class="button"> Disclaimer </a>
+      </div>
+    </div>
+
+    <!-- Cryptocurrency Input Form -->
+    <div class="input-form">
+      <h1>Cryptocurrency Input Form</h1>
+      <form action="../cryptocurrency.php" method="post">
+        <input type="text" name="name" required placeholder="Name" />
+
+        <input type="number" name="rating" required placeholder="Rating" />
+
+        <input
+          type="number"
+          name="price"
+          step="0.01"
+          required
+          placeholder="Price"
+        />
+
+        <input
+          type="number"
+          name="sales_volume"
+          required
+          placeholder="Sales Volume"
+        />
+
+        <input type="submit" value="Submit" class="center-button" />
+      </form>
+    </div>
+    <script src="../js/script.js" async defer></script>
+  </body>
+</html>
