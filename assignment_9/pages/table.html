@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Alpine Crypto Tracker</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="topnav">
+      <a class="left-section" href="../index.html">Alpine Crypto Tracker</a>
+      <div class="right-section">
+        <a href="./queries.html" class="button">Queries</a>
+        <a href="./maintenance.php" class="button"> Maintenance </a>
+        <a href="./disclaimer.html" class="button"> Disclaimer </a>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="market-table">
+      <input
+        type="text"
+        id="myInput"
+        onkeyup="myFunction()"
+        placeholder="Search for names.."
+      />
+
+      <table id="myTable">
+        <tr class="header">
+          <th style="width: 40%">Currency</th>
+          <th style="width: 20%">Price</th>
+          <th style="width: 20%">Change in 24 hours</th>
+          <th style="width: 20%">Sales volume</th>
+        </tr>
+        <tr class="not-header" data-href="../crypto/btc.html">
+          <td>
+            <div class="crypto-logo-container">
+              <img
+                src="../img/bitcoin-btc-logo-transparent.png"
+                alt="Bitcoin Logo"
+                class="crypto-logo"
+              />
+            </div>
+            <div class="crypto-details">
+              <div class="crypto-name">BTC</div>
+              <div class="crypto-abrv">Bitcoin</div>
+            </div>
+          </td>
+          <td>$ 28,253</td>
+          <td>+1.56%</td>
+          <td>$ 551,092M</td>
+        </tr>
+        <tr class="not-header" data-href="../crypto/eth.html">
+          <td>
+            <div class="crypto-logo-container">
+              <img
+                src="../img/ethereum-eth-logo-transparent.png"
+                alt="Ethereum Logo"
+                class="crypto-logo"
+              />
+            </div>
+            <div class="crypto-details">
+              <div class="crypto-name">ETH</div>
+              <div class="crypto-abrv">Ethereum</div>
+            </div>
+          </td>
+          <td>$ 1,591.05</td>
+          <td>+0.59%</td>
+          <td>$ 191,326M</td>
+        </tr>
+        <tr class="not-header" data-href="../crypto/usdt.html">
+          <td>
+            <div class="crypto-logo-container">
+              <img
+                src="../img/tether-usdt-logo-transparent.png"
+                alt="Tether Logo"
+                class="crypto-logo"
+              />
+            </div>
+            <div class="crypto-details">
+              <div class="crypto-name">USDT</div>
+              <div class="crypto-abrv">Tether</div>
+            </div>
+          </td>
+          <td>$ 1.001</td>
+          <td>+0.13%</td>
+          <td>$ 83,580M</td>
+        </tr>
+        <tr class="not-header" data-href="../crypto/bnb.html">
+          <td>
+            <div class="crypto-logo-container">
+              <img
+                src="../img/bnb-bnb-logo-transparent.png"
+                alt="BNB Logo"
+                class="crypto-logo"
+              />
+            </div>
+            <div class="crypto-details">
+              <div class="crypto-name">BNB</div>
+              <div class="crypto-abrv">BNB</div>
+            </div>
+          </td>
+          <td>$ 213.43</td>
+          <td>+0.43%</td>
+          <td>$ 32,876M</td>
+        </tr>
+        <tr class="not-header" data-href="../crypto/xrp.html">
+          <td>
+            <div class="crypto-logo-container">
+              <img
+                src="../img/xrp-xrp-logo-transparent.png"
+                alt="XRP Logo"
+                class="crypto-logo"
+              />
+            </div>
+            <div class="crypto-details">
+              <div class="crypto-name">XRP</div>
+              <div class="crypto-abrv">XRP</div>
+            </div>
+          </td>
+          <td>$ 0.49</td>
+          <td>-0.35%</td>
+          <td>$ 26,285M</td>
+        </tr>
+        <tr class="not-header" data-href="../crypto/usdc.html">
+          <td>
+            <div class="crypto-logo-container">
+              <img
+                src="../img/usd-coin-usdc-logo-transparent.png"
+                alt="USDC Logo"
+                class="crypto-logo"
+              />
+            </div>
+            <div class="crypto-details">
+              <div class="crypto-name">USDC</div>
+              <div class="crypto-abrv">USDC</div>
+            </div>
+          </td>
+          <td>$ 1</td>
+          <td>+0.10%</td>
+          <td>$ 25,262M</td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
