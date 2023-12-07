@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Profile</title>
+    <style>
+      /* Add your CSS styling here */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .user-profile {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .user-avatar {
+        text-align: center;
+      }
+      .user-avatar img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+      .user-details {
+        margin-top: 20px;
+      }
+      .user-details p {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="user-profile">
+      <div class="user-details">
+        <p><strong>Username:</strong> <span id="username"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>User ID:</strong> <span id="userId"></span></p>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript to extract username from query parameter and update user profile
+      window.onload = function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get("username");
+
+        console.log(username);
+
+        if (username) {
+          // Make an AJAX request to retrieve user details based on the username
+          fetch("../retrieve_hp.php?username=" + username)
+            .then((response) => response.json())
+            .then((data) => {
+              console.log(data);
+              document.getElementById("username").textContent = username;
+              document.getElementById("email").textContent = data.Email;
+              document.getElementById("userId").textContent = data.UserID;
+            })
+            .catch((error) => console.error("Error: " + error));
+        }
+      };
+    </script>
+  </body>
+</html>

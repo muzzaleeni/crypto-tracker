@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="topnav">
+      <a class="left-section" href="../index.html">Alpine Crypto Tracker</a>
+      <div class="right-section">
+        <a href="../pages/queries.html" class="button"> Queries </a>
+        <a href="../pages/maintenance.php" class="button"> Maintenance </a>
+        <a href="../pages/location.html" class="button"> Location </a>
+        <a href="../pages/disclaimer.html" class="button"> Disclaimer </a>
+      </div>
+    </div>
+
+    <!-- Users Input Form -->
+    <div class="input-form">
+      <h1>User Input Form</h1>
+      <form action="../user.php" method="post">
+        <input type="text" name="username" required placeholder="Username" />
+
+        <input type="text" name="email" required placeholder="Email" />
+
+        <input type="text" name="password" required placeholder="Password" />
+
+        <div class="checkb">
+          <label for="premium"
+            >Wish to enjoy premium subscription benefits?</label
+          >
+          <input type="checkbox" name="premium" id="premium" />
+        </div>
+        <input type="submit" value="Submit" class="center-button" />
+      </form>
+    </div>
+    <script src="../js/script.js" async defer></script>
+  </body>
+</html>

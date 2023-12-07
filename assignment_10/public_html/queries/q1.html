@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alpine Crypto Tracker</title>
+    <meta name="description" content="Your description here" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="topnav">
+      <a href="../index.html" class="left-section">Alpine Crypto Tracker</a>
+      <div class="right-section">
+        <a href="../pages/queries.html" class="button">Queries</a>
+        <a href="../pages/disclaimer.html" class="button">Disclaimer</a>
+        <a href="../pages/location.html" class="button">Location</a>
+        <a href="../pages/maintenance.php" class="button">Maintenance</a>
+      </div>
+    </div>
+
+    <!-- Search form -->
+    <div class="input-form">
+      <h3>Retrieves all users matching the criteria</h3>
+      <form action="../highest_price.php" method="post">
+        <!-- Autocomplete suggestions -->
+         <input
+          type="text"
+          id="username"
+          name="x"
+          required
+          placeholder="Type the username you want to search for"
+          oninput="getAutoComplete(this.value)"
+         />
+         <div id="autocomplete-suggestions"></div>
+        <input type="submit" value="Search" class="center-button" style="margin-top: 20px;"/>
+      </form>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
